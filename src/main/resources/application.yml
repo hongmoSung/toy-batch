@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/batch
+    username: root
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  #  batch:
+  #    jdbc:
+  #      initialize-schema: always
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: create
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
