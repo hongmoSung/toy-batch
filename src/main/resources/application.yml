@@ -5,9 +5,13 @@ spring:
     password: 1234
     driver-class-name: org.mariadb.jdbc.Driver
 
-  #  batch:
-  #    jdbc:
-  #      initialize-schema: always
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      names: ${job.name:NONE}
+      enabled: true
+
   jpa:
     hibernate:
       naming:
@@ -16,5 +20,6 @@ spring:
 
 logging:
   level:
+    toy.batch: info
     org.hibernate.SQL: debug
-    org.hibernate.type: trace
+#    org.hibernate.type: trace

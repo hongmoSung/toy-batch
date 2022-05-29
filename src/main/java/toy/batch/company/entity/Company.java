@@ -3,12 +3,14 @@ package toy.batch.company.entity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import toy.batch.member.Member;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@ToString
 @Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
